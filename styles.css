@@ -22,6 +22,10 @@ header {
 
 nav {
     margin-left: 20px;
+    width: 100%;
+}
+header label, #hamburger {
+    display: none;
 }
 
 /* linkkien säädökset väreistä ja alleviivauksista kaikkialle */
@@ -46,6 +50,11 @@ main img {
     max-width: 100%;
 }
 
+.narrowing{
+    margin-right: 20%;
+    margin-left: 20%
+}
+
 section h2{
     text-align: center;
     margin-top: 50px;
@@ -56,12 +65,14 @@ section p {
 }
 
 /*  tein alunperin ohjeiden mukaan tämän taulukon niin että siinä oli 2x3 ruutua, mutta ei ollu kiva.
-    tekoäly antoi tällaisen ihan jeesus vastauksen että ne taittuu kivasti mihinkä tahansa kokoon */
+    tekoäly antoi tällaisen hienon vastauksen että ne taittuu kivasti mihinkä tahansa kokoon, mutta ei jätä
+    orpoja ruutuja */
 .fgrid {
     max-width: calc(3 * 320px + 2 * 24px);
     margin: 0 auto;
     display: grid;
     gap: 24px;
+    padding: 0 12px;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
@@ -84,7 +95,11 @@ section p {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase; /* optional: adds impact */
 }
 
 .centering {
@@ -124,6 +139,7 @@ footer {
     padding: 40px 20px;
     font-family: system-ui, sans-serif;
     text-align: center;
+    margin-top: 50px;
 }
 .footerlinks {
     display: flex;
@@ -155,4 +171,40 @@ footer h4 {
     footer ul li {
     flex-direction: column;
 }
+}
+@media screen and (max-width: 768px){
+  /* (A) BREAK INTO VERTICAL MENU */
+
+header {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+}
+
+nav div a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+  }
+ 
+  /* (B) SHOW HAMBURGER ICON */
+header label { 
+    display: inline-block; 
+    color: white;
+    background: orange;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+nav div a { display: none; }
+header input:checked ~ nav div a { display: block; }
 }
