@@ -24,6 +24,9 @@ nav {
     margin-left: 20px;
     width: 100%;
 }
+nav div a {
+    margin-right: 10px;
+}
 header label, #hamburger {
     display: none;
 }
@@ -58,10 +61,20 @@ main img {
 section h2{
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 section p {
     text-align: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase; /* optional: adds impact */
+    margin-bottom: 40px;
 }
 
 /*  tein alunperin ohjeiden mukaan tämän taulukon niin että siinä oli 2x3 ruutua, mutta ei ollu kiva.
@@ -78,6 +91,7 @@ section p {
 
 /* tässä on kunkin kortin tiedot, lähinnä väri ja reunat */
 .fcard {
+    margin-top: 30px;
     background: #D9F3FF ;
     border: 1px solid: #DDDADA;
     border-radius: 15px;
@@ -94,17 +108,16 @@ section p {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    text-transform: uppercase; /* optional: adds impact */
-}
-
 .centering {
     text-align: center;
     margin-top: 30px;
+}
+.plaintext {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* tämä on uutisosion modaukset */
