@@ -58,6 +58,18 @@ main img {
     margin-left: 20%
 }
 
+
+
+.tarina-kuva {
+    width: 500px;
+    height: auto;
+}
+
+.muokkaus{
+    text-align: center;
+    padding: 3px;
+}
+
 section h2{
     text-align: center;
     margin-top: 50px;
