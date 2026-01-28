@@ -307,6 +307,9 @@ header input:checked ~ nav div a { display: block; }
     .news {
     flex-direction: column;
     }
+    .news p {
+        max-width: 90%;
+    }
 
     footer ul li {
     flex-direction: column;
