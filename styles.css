@@ -88,6 +88,82 @@ h1 {
     text-transform: uppercase;
     margin-bottom: 40px;
 }
+/* contact sivun lomakkeen, nappulan ja muut säädöt. */
+.contact-layout {
+    margin-right: 20%;
+    margin-left: 20%
+}
+.contact-sisältö {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+.yhteystiedot {
+    flex: 1;
+}
+.contact-kuva {
+    flex: 1;
+}
+.contact-kuva img {
+    width: 100%;
+    border-radius: 12px;
+}
+.field {
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    background: rgba(217, 243, 255, 0.6);
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+.field input,
+.field textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 6px 0;
+    color: #222;
+}
+.field:focus-within {
+    background: rgba(217, 243, 255, 0.9);
+    box-shadow: 0 0 0 2px #99e6ff;
+}
+.field textarea {
+    resize: none;
+    height: 90px;
+}
+.yhteystiedot button {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 10px;
+    background: rgba(153, 230, 255, 0.6);
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #004a66;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.yhteystiedot button:hover {
+    background: rgba(153, 230, 255, 0.9);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+.yhteystiedot button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
 
 /*  tein alunperin ohjeiden mukaan tämän taulukon niin että siinä oli 2x3 ruutua, mutta ei ollu kiva.
     tekoäly antoi tällaisen hienon vastauksen että ne taittuu kivasti mihinkä tahansa kokoon, mutta ei jätä
@@ -337,4 +413,19 @@ header input:checked ~ nav div a { display: block; }
     margin-right: 10%;
     margin-left: 10%
     }
+    .contact-sisältö {
+    flex-direction: column;
+}
+.contact-layout {
+    order: 1;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.contact-kuva {
+    order: 2;
+}
+.yhteystiedot {
+    order: 3;
+}
+    
 }
