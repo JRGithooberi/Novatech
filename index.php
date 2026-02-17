@@ -132,6 +132,8 @@
             } 
 
             echo '</article>';
+
+        $pdo->connection = null;
         ?>
 
         <article class="news">

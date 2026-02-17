@@ -42,12 +42,21 @@
     // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä
     $stmt = $pdo->prepare($sql);
 
-    $stmt->execute();
-
     // Haetaan kaikki rivit
-    $rivit = $stmt -> fetchAll();
 
     $uutinen = htmlspecialchars($_GET['id']);
+
+    $stmt->execute([$uutinen]);
+
+    $rivit = $stmt -> fetchAll();
+
+    foreach($rivit as $rivi) {
+    echo '<h2>' . $rivi['otsikko'] . '</h2>';
+    echo '<p>' . $rivi['pvm'] . '</p><br>';
+    echo '<p>' . $rivi['teksti'] . '</p></a>';
+    } 
+    
+    $pdo->connection = null;
 
 ?>
 
