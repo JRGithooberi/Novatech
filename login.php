@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Novatech Solutions - Hosting</title>
+</head>
+
+<body>
+
+    <header>
+        <!--logon lisäys-->
+        <div class="logo">
+            <a href="index.php">
+            <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger">
+
+        <nav>
+        <!--navigaatiolinkit-->
+            <div>
+                <a href="index.php">Home</a>
+                <a href="Products.html">Products</a>
+                <a href="Story.html">Story</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+        </nav>
+
+    </header>
+ <!--yläpalkin loppu-->
+
+ <main class="contact-layout">
+
+    <h1>Contact NovaTech solutions</h1>
+        
+    <div class="contact-sisältö">
+        <section class="yhteystiedot">
+            <form action="#" method="post">
+                <div class="field">
+                    <label>Full Name</label>
+                    <input type="text">
+                </div>
+
+                <div class ="field">
+                    <label>Email Address</label>
+                    <input type="email">
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="contact-kuva">
+            <img src="https://img.freepik.com/free-photo/office-desktop-with-laptop-business-man_23-2148174084.jpg" alt="contact us">
+        </section>
+    
+    </div>
+
+
+
+ </main>
+
+
+<!--alapalkin alku-->
+    <footer>
+        <div class="footerlinks">
+            <div>
+                <h4>Follow us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>More about us</h4>
+                <ul>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+            <div class="footerinfo">
+                <p>Novatech Solutions 2026 – Designed By: Ryhmä 14</p>
+            </div>
+
+    </footer>
+</body>
