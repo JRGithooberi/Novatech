@@ -45,8 +45,6 @@ a:hover {
     color:darkblue
 }
 
-/* Tämä on vain article news osion otsikolle */
-
 /* alunperin tehty että etusivun kuva toimii kivasti pienillä ruuduilla */
 main img {
     border-radius: 10px;
@@ -210,23 +208,31 @@ h1 {
 
 /* tämä on uutisosion modaukset */
 .news {
-
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
     padding: 10px;
-    font-size: 1.1em;
-    text-align: center; 
-    font-family: Arial, Helvetica, sans-serif; 
-    width: 60%;
-    margin:auto;
-    background-color:#b36b00;
-    border-radius: 10px;
 }
 
-/* uutisissa antaa vasemmanpuoleisille tilaa oikealle*/
 .news a {
-    margin-right: 20px;
+    display: block;
+    flex: 1 1 30%;
+    max-width: 300px;
+    border: 2px solid #99e6ff; 
+    background-color: #FFC082;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
 }
-.news a::first-line {
+
+.news a h2{
     font-weight: bold;
+}
+.news p {
+    white-space: pre-line;
 }
 
 .product {
@@ -309,6 +315,17 @@ h1 {
   background: #b36b00;
   color: white;
 }
+/* avattujen uutisten nätistys*/
+
+.kokonaisuus {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 60%;
+    margin: auto;
+    padding: 20px;
+}
+
+
 
 /* footerin linkit vierekkäin ja infot alle */
 footer {
@@ -422,5 +439,7 @@ header input:checked ~ nav div a { display: block; }
 .yhteystiedot {
     order: 3;
 }
-    
+.news a {
+    flex: 1 1 100%;
+}
 }

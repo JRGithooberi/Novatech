@@ -31,35 +31,37 @@
 
     </header>
 
+    <article class="kokonaisuus">
 
-<?php include('asetukset.php');?>
+    <?php include('asetukset.php');?>
 
-<?php
-    $sql = "SELECT * FROM tiedot
-            WHERE id = ?";
-    #echo $sql;
+    <?php
+        $sql = "SELECT * FROM uutiset
+                WHERE id = ?";
+        #echo $sql;
 
-    // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä
-    $stmt = $pdo->prepare($sql);
+        // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä
+        $stmt = $pdo->prepare($sql);
 
-    // Haetaan kaikki rivit
+        // Haetaan kaikki rivit
 
-    $uutinen = htmlspecialchars($_GET['id']);
+        $uutinen = htmlspecialchars($_GET['id']);
 
-    $stmt->execute([$uutinen]);
+        $stmt->execute([$uutinen]);
 
-    $rivit = $stmt -> fetchAll();
+        $rivit = $stmt -> fetchAll();
 
-    foreach($rivit as $rivi) {
-    echo '<h2>' . $rivi['otsikko'] . '</h2>';
-    echo '<p>' . $rivi['pvm'] . '</p><br>';
-    echo '<p>' . $rivi['teksti'] . '</p></a>';
-    } 
-    
-    $pdo->connection = null;
+        foreach($rivit as $rivi) {
+        echo '<h2>' . $rivi['otsikko'] . '</h2>';
+        echo '<p>' . $rivi['pvm'] . '</p><br>';
+        echo '<p>' . $rivi['teksti'] . '</p>';
+        } 
+        
+        $pdo->connection = null;
 
-?>
+    ?>
 
+    </article>
 
     <footer>
         <div class="footerlinks">

@@ -29,6 +29,7 @@
                 <a href="Products.html">Products</a>
                 <a href="Story.html">Story</a>
                 <a href="Contact.html">Contact</a>
+                <a href="login.php">Login</a>
             </div>
         </nav>
 
@@ -126,7 +127,7 @@
 
             foreach($rivit as $rivi) {
                 $linkki = 'uutinen.php?id=' . $rivi['id'];
-                echo '<a href="' . $linkki . '">'  . $rivi['otsikko'];
+                echo '<a href="' . $linkki . '"> <h2>'  . $rivi['otsikko'] . '</h2>';
                 echo '<p>' . $rivi['pvm'] . '</p><br>';
                 echo '<p>' . $rivi['teksti'] . '</p></a>';
             } 
@@ -135,14 +136,6 @@
 
         $pdo->connection = null;
         ?>
-
-        <article class="news">
-            <p><b>1.1.2026 Updating our policy<br><br></b>
-            <b>Duis</b> aute irure dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla  pariatur. Excepteur sint occaecat 
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
-
-        </article>
 
         <p class="plaintext">
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
