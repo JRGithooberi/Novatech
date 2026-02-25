@@ -53,19 +53,57 @@ main img {
 
 .narrowing{
     margin-right: 20%;
-    margin-left: 20%
+    margin-left: 20%;
 }
 
+.cruditus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top:10px;
+}
 
+.cruditus form input,
+.cruditus form button {
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+    width: 60%;
+}
+
+.cruditus form textarea {
+    display: block;
+    box-sizing: border-box;
+    height: 350px;
+    font-size: 16px;
+    padding: 10px;
+    width: 60%;
+}
 
 .tarina-kuva {
     width: 500px;
     height: auto;
 }
 
+.uutis-kuva {
+    float: left;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 10px 20px 20px auto;
+    border-radius: 10px;
+}
+
 .muokkaus{
     text-align: center;
     padding: 3px;
+}
+section {
+        width: 100%;
 }
 
 section h2{
@@ -325,6 +363,13 @@ h1 {
     padding: 20px;
 }
 
+.valinta {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #2196F3;
+}
+
 
 
 /* footerin linkit vierekkäin ja infot alle */
@@ -441,5 +486,10 @@ header input:checked ~ nav div a { display: block; }
 }
 .news a {
     flex: 1 1 100%;
+}
+
+.uutis-kuva {
+    float: none;
+    display: block;
 }
 }

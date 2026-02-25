@@ -113,7 +113,7 @@
         <!--uutiset, class left määrittää että antaa tilaa oikealle-->
         
         <?php
-        $sql = "SELECT * FROM uutiset LIMIT 3";
+        $sql = "SELECT * FROM uutiset ORDER BY pvm DESC LIMIT 3";
         #echo $sql;
 
         // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä

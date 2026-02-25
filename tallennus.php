@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista</title>
+    <title>Uutisen tallennus</title>
 </head>
 <body>
    
    <?php include('asetukset.php'); ?>
 
-    <h2>Lista</h2>
+    <h2>Tallennus</h2>
 
     <?php
-    $sql = "INSERT INTO tiedot(sukunimi, etunimi, syntymävuosi) VALUES (?,?,?)";
+    $sql = "INSERT INTO uutiset(otsikko, teksti, urli) VALUES (?,?,?)";
     #echo $sql;
 
     // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä
     $stmt = $pdo->prepare($sql);
 
-    $sukunimi = $_POST['sn'];
-    $etunimi = $_POST['en'];
-    $syntymavuosi = $_POST['sv'];
+    $otsikko = $_POST['otsikko'];
+    $teksti = $_POST['teksti'];
+    $urli = $_POST['kuva'];
 
-    if (empty($sukunimi) || strlen($sukunimi) >= 30 || empty($etunimi) || strlen($etunimi) >= 30 || empty($syntymavuosi) || strlen($syntymavuosi) !== 4) {
-    echo "Tarkista antamasi tiedot.<br><br>";
-    }else{
-    $stmt->execute([$sukunimi, $etunimi, $syntymavuosi]);
-    echo "<p>Tiedot tallennettu!</p><br><br>";
-    }
+    $stmt->execute([$otsikko, $teksti, $urli]);
+    echo "<p>Uutinen tallennettu!</p><br><br>";
 
     $pdo->connection = null;
     ?>

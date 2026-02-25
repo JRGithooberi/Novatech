@@ -54,6 +54,9 @@
         foreach($rivit as $rivi) {
         echo '<h2>' . $rivi['otsikko'] . '</h2>';
         echo '<p>' . $rivi['pvm'] . '</p><br>';
+        if (!empty($rivi['urli'])) {
+        echo '<img src="' . htmlspecialchars($rivi['urli']) . '" alt="Uutisen kuva" class="uutis-kuva">';
+        }
         echo '<p>' . $rivi['teksti'] . '</p>';
         } 
         
@@ -62,6 +65,9 @@
     ?>
 
     </article>
+
+    <div style="clear: right;"></div>
+    <div style="clear: left;"></div>
 
     <footer>
         <div class="footerlinks">
